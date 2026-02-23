@@ -110,7 +110,7 @@ section {
   padding-bottom: 5px;
 }
 
-section:nth-of-type(3) {
+#experiencia {
   padding-top: 5px;
 }
 
@@ -279,38 +279,85 @@ nav a:hover {
   font-weight: 500;
 }
 
-#about,
-section:nth-of-type(3) {
-  background-color: #8b6f5f;
+#about {
+  background-color: #8b7565;
   color: var(--cream);
 }
 
-#about h2,
-section:nth-of-type(3) h2,
-section:nth-of-type(3) h3 {
+#about h2 {
+  color: var(--warm-white);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#about p {
+  color: #f5f1e8;
+  opacity: 0.95;
+  line-height: 1.8;
+}
+
+#experiencia {
+  background: linear-gradient(rgba(139, 111, 95, 0.45), rgba(107, 67, 67, 0.55)),
+              url('imagenes/jazzarte.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #9a7d6d;
+  color: var(--cream);
+}
+
+#experiencia h2 {
+  color: var(--warm-white);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#experiencia h3 {
   color: var(--warm-white);
 }
 
-#about p,
-section:nth-of-type(3) p {
-  color: var(--text-muted);
+#experiencia p {
+  color: #e8dcc4;
+  opacity: 0.95;
 }
 
-#details,
-section:nth-of-type(5),
+#details {
+  background-color: #6b5347;
+  color: var(--cream);
+}
+
+#details h2 {
+  color: var(--warm-white);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#details p {
+  color: #f5f1e8;
+  opacity: 0.95;
+}
+
+#faq {
+  background-color: #5a4438;
+  color: var(--cream);
+}
+
+#faq h2 {
+  color: var(--warm-white);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#faq p {
+  color: #f5f1e8;
+  opacity: 0.95;
+}
+
 #registro {
   background-color: #3d2c22;
   color: var(--cream);
 }
 
-#details h2,
-section:nth-of-type(5) h2,
 #registro h2 {
   color: var(--warm-white);
 }
 
-#details p,
-section:nth-of-type(5) p,
 #registro p {
   color: var(--text-muted);
 }
@@ -351,12 +398,16 @@ section:nth-of-type(5) .btn:hover,
   overflow: hidden;
 }
 
-section:nth-of-type(3) .card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(245, 241, 232, 0.15);
+#experiencia .card {
+  background: rgba(61, 44, 34, 0.35);
+  border: 1px solid rgba(245, 241, 232, 0.25);
 }
 
-section:nth-of-type(3) .card::before {
+#experiencia .card:hover {
+  background: rgba(61, 44, 34, 0.5);
+}
+
+#experiencia .card::before {
   background: linear-gradient(90deg, transparent, var(--soft-gold), transparent);
 }
 
@@ -390,8 +441,8 @@ section:nth-of-type(3) .card::before {
 }
 
 #details .details {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(245, 241, 232, 0.08);
+  background: rgba(61, 44, 34, 0.6);
+  border: 1px solid rgba(245, 241, 232, 0.25);
 }
 
 .details p {
@@ -400,9 +451,10 @@ section:nth-of-type(3) .card::before {
 }
 
 .details strong {
-  color: var(--soft-gold);
+  color: #f5f1e8;
   font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .faq-item {
@@ -421,12 +473,24 @@ section:nth-of-type(5) .faq-item {
   border-left: 3px solid var(--soft-gold);
 }
 
+#faq .faq-item {
+  background: rgba(61, 44, 34, 0.5);
+  border-left: 3px solid var(--soft-gold);
+  border: 1px solid rgba(245, 241, 232, 0.2);
+  border-left: 3px solid var(--soft-gold);
+}
+
 .faq-item strong {
   font-family: 'Playfair Display', serif;
   font-size: 1.15rem;
   color: var(--soft-gold);
   display: block;
   margin-bottom: 10px;
+}
+
+#faq .faq-item strong {
+  color: #f5f1e8;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 footer {
@@ -472,6 +536,10 @@ footer {
     min-height: 100vh;
   }
 
+  #experiencia {
+    background-attachment: scroll;
+  }
+
   .hero .container {
     padding: 80px 20px;
   }
@@ -485,7 +553,7 @@ footer {
     padding-bottom: 5px;
   }
 
-  section:nth-of-type(3) {
+  #experiencia {
     padding-top: 5px;
   }
 
@@ -554,7 +622,7 @@ footer {
 </section>
 
 <!-- BENEFICIOS -->
-<section>
+<section id="experiencia">
   <div class="container">
     <h2>La Experiencia</h2>
     <div class="grid">
@@ -588,7 +656,7 @@ footer {
 </section>
 
 <!-- FAQ -->
-<section>
+<section id="faq">
   <div class="container">
     <h2>Preguntas Frecuentes</h2>
     <div class="faq-item">
